@@ -8,7 +8,5 @@ import { Component } from '@angular/core';
 
 // in the class I can define the properties and methods that will be used in the component
 export class AppComponent {
-  // I can access this property in the HTML file using the interpolation syntax {{ title }}
-  // that sintax allows any js expression to be evaluated
-  title: string = 'Task tracker';
+  
 }
