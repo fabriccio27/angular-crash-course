@@ -9,4 +9,7 @@ export class HeaderComponent {
   // I can access this property in the HTML file using the interpolation syntax {{ title }}
   // that sintax allows any js expression to be evaluated
   title: string = 'Task tracker';
+  toggleAddTask (): void {
+    console.log('toggle')
+  }
 }
