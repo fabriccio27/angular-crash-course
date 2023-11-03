@@ -8,6 +8,9 @@ import { TasksComponent } from './components/tasks/tasks.component';
 import { TaskItemComponent } from './components/task-item/task-item.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
+/* everytime I generate a new component or install a package it gets "recognized here",
+and if it didn't you have do declare them here*/
+
 @NgModule({
   declarations: [
     AppComponent,
