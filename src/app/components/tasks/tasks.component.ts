@@ -20,5 +20,8 @@ export class TasksComponent {
     This sets up a subscription, and the provided function (tasks => this.tasks = tasks)
     is the callback that executes when the Observable emits a value (in this case, an array of Task objects). */
   }
+  deleteTask(task: Task) {
+    this.taskService.deleteTask(task).subscribe(() => this.tasks = this.tasks.filter(t => t.id !== task.id));
+  }
 
 }
