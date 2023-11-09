@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
-import { Observable,of } from 'rxjs';
+import { Observable } from 'rxjs';
 import { Task } from 'src/app/Task';
-import { TASKS } from 'src/app/mock-tasks';
 // angular being a framework uses an http client to make requests to a server, not fetch or axios like in react
 import {HttpClient, HttpHeaders} from "@angular/common/http";
 
@@ -14,7 +13,7 @@ export class TaskService {
   constructor(private http:HttpClient) { }
 
   getTasks(): Observable<Task[]> {
-    // we need to use of from rxjs to turn the TASKS array into an observable
+    // <Task[]>: This is a TypeScript generic type annotation. It tells TypeScript that the expected response from the HTTP GET request is an array of Task objects. This helps with type checking and autocompletion in your development environment.
     return this.http.get<Task[]>(this.apiUrl)
   }
 }
