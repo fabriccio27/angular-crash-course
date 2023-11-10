@@ -8,6 +8,7 @@ import { ButtonComponent } from './components/button/button.component';
 import { TasksComponent } from './components/tasks/tasks.component';
 import { TaskItemComponent } from './components/task-item/task-item.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { AddTaskComponent } from './components/add-task/add-task.component';
 
 /* everytime I generate a new component or install a package it gets "recognized here",
 and if it didn't you have do declare them here*/
@@ -18,7 +19,8 @@ and if it didn't you have do declare them here*/
     HeaderComponent,
     ButtonComponent,
     TasksComponent,
-    TaskItemComponent
+    TaskItemComponent,
+    AddTaskComponent
   ],
   imports: [
     BrowserModule,
