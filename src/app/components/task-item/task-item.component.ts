@@ -13,6 +13,7 @@ export class TaskItemComponent implements OnInit {
   /* This is a decorator in Angular that marks a property as an "output" property.
   Output properties are used to pass data from a child component to a parent component in Angular's component hierarchy. */
   @Output() onDeleteTask: EventEmitter<Task> = new EventEmitter();
+  @Output() onToggleReminder: EventEmitter<Task> = new EventEmitter();
   faTimes = faTimes;
   constructor() { }
   ngOnInit(): void {}
@@ -20,5 +21,8 @@ export class TaskItemComponent implements OnInit {
   so we're going to emit an event and make the call in the parent */
   onDelete(task: Task) {
     this.onDeleteTask.emit(task);
+  }
+  onToggle(task: Task) {
+    this.onToggleReminder.emit(task);
   }
 }

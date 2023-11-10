@@ -1,4 +1,14 @@
-<div class="task">
+<!-- The [ngClass] directive in your Angular component's HTML is used for dynamically applying CSS classes
+    based on certain conditions or expressions. It's a powerful feature in Angular that allows you to
+    control the class attribute of HTML elements in a declarative and reactive way. -->
+<!--     Directives in Angular are used to add behavior to elements in the DOM (Document Object Model). There are three main types of directives in Angular:
+
+    Component Directives: These are directives with a template. Every Angular component is technically a directive. They are the most common directives and are used to create UI widgets or reusable components.
+    
+    Structural Directives: These directives change the DOM layout by adding, removing, or manipulating elements. Examples include *ngIf, *ngFor, and *ngSwitch. They usually change the structure of the view by adding or removing elements.
+    
+    Attribute Directives: These directives change the appearance or behavior of an element, component, or another directive. They are used for changing the look and behavior of DOM elements. Examples include ngStyle and ngClass. -->
+<div class="task" [ngClass]="{reminder: task.reminder}" (dblclick)="onToggle(task)">
     <h3>{{task.text}} <fa-icon (click)="onDelete(task)" [ngStyle]="{'color': 'red'}" [icon]="faTimes"></fa-icon></h3>
     <p>{{task.day}}</p>
 </div>
