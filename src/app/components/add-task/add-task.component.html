@@ -1,4 +1,4 @@
-<form class="add-form" (ngSubmit)="onSubmit()">
+<form class="add-form" (ngSubmit)="onSubmit()" *ngIf="showAddTask">
     <div class="form-control">
         <label for="text">Task</label>
         <!-- In Angular, [(ngModel)] creates a two-way data binding between the HTML element and a property of the component

@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { UiService } from 'src/app/services/ui.service';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-header',
@@ -9,7 +11,14 @@ export class HeaderComponent {
   // I can access this property in the HTML file using the interpolation syntax {{ title }}
   // that sintax allows any js expression to be evaluated
   title: string = 'Task tracker';
+  showAddTask!: boolean;
+  subscription!: Subscription;
+
+  constructor(private uiService: UiService) {
+    this.subscription = this.uiService.onToggle().subscribe(value => this.showAddTask = value);
+  }
+
   toggleAddTask (): void {
-    console.log('toggle')
+    this.uiService.toggleAddTask();
   }
 }
