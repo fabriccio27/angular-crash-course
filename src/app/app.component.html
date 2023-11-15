@@ -1,4 +1,17 @@
 <div class="container">
     <app-header></app-header>
-    <app-tasks></app-tasks>
+    <!-- 
+    The <router-outlet> directive plays a crucial role in Angular's routing mechanism. It acts as a placeholder
+    that Angular dynamically fills based on the current router state. When you define routes in your Angular
+    application, like in your appRoutes, you are mapping paths to components. However, Angular needs to know
+    where in the template these components should be displayed when a route is activated. This is where
+    <router-outlet> comes in. It marks the spot in the template where the router should display the components
+    for the active route. -->
+    <!-- When the application navigates to the root URL (''), the TasksComponent will be instantiated and inserted
+    into the DOM where the <router-outlet> is placed. If you had more routes, the component associated with the
+    active route would be displayed in the place of <router-outlet>.
+    As users navigate through your application, Angular automatically updates the content inside <router-outlet>.
+    When the route changes, Angular handles the work of destroying the old component and creating the new one
+    that corresponds to the new route, ensuring a smooth transition between components. -->
+    <router-outlet></router-outlet>
 </div>
